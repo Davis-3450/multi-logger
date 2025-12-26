@@ -5,3 +5,6 @@ description = "A flexible logger based on loguru with multiple notification clie
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = ["discord-webhook>=1.4.1", "httpx>=0.28.1", "loguru>=0.7.3"]
+
+[dependency-groups]
+dev = ["pytest>=9.0.2", "twine>=6.2.0"]
