@@ -1,3 +1,5 @@
+from typing import Optional
+
 from loguru import logger as loguru_logger
 
 from package.clients.discord import DiscordClient
@@ -8,9 +10,9 @@ from package.emojis import Level
 class MultiLogger:
     def __init__(
         self,
-        discord_webhook_url: str = None,
-        telegram_token: str = None,
-        telegram_chat_id: int = None,
+        discord_webhook_url: Optional[str] = None,
+        telegram_token: Optional[str] = None,
+        telegram_chat_id: Optional[int] = None,
         use_emojis: bool = False,
     ) -> None:
         """Initialize MultiLogger with optional Discord and Telegram clients.

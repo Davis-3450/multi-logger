@@ -4,7 +4,9 @@ BASE_URL = "https://api.telegram.org/bot{token}/{method}"
 
 
 class TelegramClient:
-    def __init__(self, token: str, chat_id: int, api_url: str = BASE_URL):
+    def __init__(
+        self, token: Optional[str], chat_id: Optional[int], api_url: str = BASE_URL
+    ):
         self._api_url = api_url
         self._token = token
         self._chat_id = chat_id
